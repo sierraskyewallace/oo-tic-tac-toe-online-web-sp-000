@@ -79,8 +79,7 @@ end
 end
 
   def full?
-    @board.all? { |token| token == "X" || token == "O"}
-    true
+    @board.all? {|index| index == "X" || index == "O"}
   end
   
 
