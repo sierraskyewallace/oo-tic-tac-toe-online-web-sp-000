@@ -104,4 +104,12 @@ end
         return nil
       end
     end
+  end
+  def play 
+    until over? 
+    turn
+  end
+  
+  
+end
   
