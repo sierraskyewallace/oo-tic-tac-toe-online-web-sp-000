@@ -66,16 +66,15 @@ end
    end
  end
   def won?
-    empty = @board.none? {|token| token == "X" || token == "O"}
-    if empty
-      false
-    WIN_COMBINATIONS.each do |combination|
-      if @board[combination[0]] == "X" && @board[combination[1]] == "X" && @board[combination[2]] == "X" || @board[combination[0]] == "O" && @board[combination[1]] == "O" && @board[combination[2]] == "O" 
-        return combination
+    WIN_COMBINATIONS.each do |combo|
+      position1 = @board[combo[0]]
+      position2 = @board[combo[1]]
+      position3 = @board[combo[2]]
+      if position1 == "X" && position2 == "X" && position3 == "X" || position1 == "O" && position2 == "O" && position3 == "O"
+        return combo
       end
     end
-    false
+    return false
   end
-end
 end
 
