@@ -81,4 +81,4 @@ end
     @board.all? {|index| index == "X" || index == "O"}
   end
   
-
+end
