@@ -109,5 +109,7 @@ end
       until over?
       turn 
     end
+    if won? 
+      puts "Congratulations #{winner}!"
   end
 end
