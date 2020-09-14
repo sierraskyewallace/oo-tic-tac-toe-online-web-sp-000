@@ -80,3 +80,14 @@ end
     @board.all? {|index| index == "X" || index == "O"}
   end
 end
+  def draw?
+    if won? 
+      true
+      if draw?
+        true
+      else
+        false
+      end
+    end
+  end
+  
