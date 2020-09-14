@@ -81,13 +81,11 @@ end
   end
 end
   def draw?
-    if won? 
+    if won? || draw?
       true
-      if draw?
-        true
-      else
-        false
-      end
+    else
+      false
     end
   end
+  
   
